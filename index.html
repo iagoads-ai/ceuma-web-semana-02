@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rotas do Maranhão — Blog de viagem</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #1f2933;
+      background-color: #e8eef3;
+    }
+
+    header, main, aside, footer {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 16px;
+    }
+
+    header h1 { margin: 16px 0 8px; color: #0b4f6c; }
+    nav { display: flex; flex-wrap: wrap; gap: 16px; }
+    nav a { color: #0b4f6c; font-weight: 600; }
+
+    article { margin-bottom: 32px; }
+    article img { display: block; max-width: 100%; height: auto; border-radius: 8px; }
+
+    /* 1. Container do formulário */
+    .container {
+      max-width: 720px;
+      margin: 0 auto 32px;
+      padding: 24px;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(15, 40, 60, 0.12);
+    }
+    .container h2 { margin-top: 0; }
+
+    fieldset {
+      margin: 0 0 20px;
+      padding: 16px;
+      border: 1px solid #c5d2dc;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    legend { padding: 0 6px; font-weight: 700; color: #0b4f6c; }
+
+    /* 2. Grupos de campos */
+    .campo {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    label { font-size: 15px; font-weight: 600; }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"] {
+      padding: 10px 12px;
+      border: 1px solid #9aabb8;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    select {
+      padding: 10px 12px;
+      border: 1px solid #9aabb8;
+      border-radius: 6px;
+      font-size: 16px;
+      background-color: #ffffff;
+    }
+
+    input:focus-visible,
+    select:focus-visible {
+      outline: 3px solid #f2a93b;
+      outline-offset: 2px;
+      border-color: #0b4f6c;
+    }
+
+    /* Checkbox compacto e alinhado ao texto */
+    .campo-checkbox {
+      flex-direction: row;
+      align-items: center;
+      gap: 8px;
+    }
+    .campo-checkbox input {
+      width: 18px;
+      height: 18px;
+      margin: 0;
+    }
+    .campo-checkbox label { font-weight: 400; }
+
+    /* 3. Botão de envio */
+    button[type="submit"] {
+      background-color: #0b4f6c;
+      color: #ffffff;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    button[type="submit"]:hover { background-color: #08384d; }
+    button[type="submit"]:focus-visible {
+      outline: 3px solid #f2a93b;
+      outline-offset: 3px;
+    }
+
+    /* 4. Bônus: nome e e-mail na mesma linha em telas largas */
+    .linha {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    @media (min-width: 640px) {
+      .linha {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      .linha .campo { flex: 0 1 48%; }
+    }
+
+    footer { color: #52606d; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Rotas do Maranhão</h1>
+    <nav aria-label="Navegação principal">
+      <a href="#lencois">Lençóis Maranhenses</a>
+      <a href="#centro-historico">Centro Histórico</a>
+      <a href="#inscricao">Inscrição</a>
+    </nav>
+  </header>
+
+  <main>
+    <article id="lencois">
+      <h2>Lençóis Maranhenses: quando visitar as lagoas</h2>
+      <p>As lagoas entre as dunas ficam mais cheias entre junho e setembro, depois da temporada de chuvas. Barreirinhas é a principal porta de entrada e oferece passeios de meio dia para a Lagoa Azul e a Lagoa Bonita. Leve água, protetor solar e chegue cedo para evitar o sol forte da tarde.</p>
+      <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NDAgMzYwIiB3aWR0aD0iNjQwIiBoZWlnaHQ9IjM2MCI+CjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iYyIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzdjYzRmMiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2Q5ZjBmZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPgo8cmVjdCB3aWR0aD0iNjQwIiBoZWlnaHQ9IjM2MCIgZmlsbD0idXJsKCNjKSIvPgo8Y2lyY2xlIGN4PSI1MjAiIGN5PSI3MCIgcj0iMzgiIGZpbGw9IiNmZmQ0NWMiLz4KPHBhdGggZD0iTTAgMjMwIFExMjAgMTUwIDI1MCAyMjAgVDUyMCAyMDAgVDY0MCAyMTAgVjM2MCBIMFoiIGZpbGw9IiNmNGU2YzQiLz4KPHBhdGggZD0iTTAgMjgwIFExNjAgMjEwIDMzMCAyNzAgVDY0MCAyNTAgVjM2MCBIMFoiIGZpbGw9IiNlY2Q4YTgiLz4KPGVsbGlwc2UgY3g9IjMwMCIgY3k9IjMwMCIgcng9IjkwIiByeT0iMTgiIGZpbGw9IiMzZmE3YzkiLz4KPGVsbGlwc2UgY3g9IjUwMCIgY3k9IjMyMCIgcng9IjYwIiByeT0iMTIiIGZpbGw9IiMyZjk3YmEiLz4KPC9zdmc+" width="640" height="360" alt="Ilustração de dunas brancas sob céu azul com duas lagoas de água azul entre elas e o sol no canto superior direito.">
+    </article>
+
+    <article id="centro-historico">
+      <h2>Um passeio a pé pelo Centro Histórico de São Luís</h2>
+      <p>O conjunto de casarões coloniais cobertos de azulejos é Patrimônio Mundial da UNESCO. Um roteiro tranquilo começa na Praça Benedito Leite, desce pela Rua Portugal e termina na Praia Grande, onde há feiras de artesanato e apresentações de bumba meu boi nas noites de junho.</p>
+      <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NDAgMzYwIiB3aWR0aD0iNjQwIiBoZWlnaHQ9IjM2MCI+CjxyZWN0IHdpZHRoPSI2NDAiIGhlaWdodD0iMzYwIiBmaWxsPSIjYmZlM2Y3Ii8+CjxyZWN0IHg9IjAiIHk9IjMwMCIgd2lkdGg9IjY0MCIgaGVpZ2h0PSI2MCIgZmlsbD0iIzhkN2I2OCIvPgo8cmVjdCB4PSI0MCIgeT0iMTMwIiB3aWR0aD0iMTcwIiBoZWlnaHQ9IjE3MCIgZmlsbD0iI2YyYzE0ZSIvPgo8cmVjdCB4PSIyMzAiIHk9IjExMCIgd2lkdGg9IjE4MCIgaGVpZ2h0PSIxOTAiIGZpbGw9IiM0ZjlkOGYiLz4KPHJlY3QgeD0iNDMwIiB5PSIxNDAiIHdpZHRoPSIxNzAiIGhlaWdodD0iMTYwIiBmaWxsPSIjZTA3YTVmIi8+CjxnIGZpbGw9IiNmZmZmZmYiIG9wYWNpdHk9IjAuOSI+CjxyZWN0IHg9IjY1IiB5PSIxNjAiIHdpZHRoPSIzMCIgaGVpZ2h0PSI0NSIvPjxyZWN0IHg9IjE1NSIgeT0iMTYwIiB3aWR0aD0iMzAiIGhlaWdodD0iNDUiLz48cmVjdCB4PSIxMTAiIHk9IjIzNSIgd2lkdGg9IjMwIiBoZWlnaHQ9IjY1Ii8+CjxyZWN0IHg9IjI1NSIgeT0iMTQwIiB3aWR0aD0iMzAiIGhlaWdodD0iNDUiLz48cmVjdCB4PSIzMDUiIHk9IjE0MCIgd2lkdGg9IjMwIiBoZWlnaHQ9IjQ1Ii8+PHJlY3QgeD0iMzU1IiB5PSIxNDAiIHdpZHRoPSIzMCIgaGVpZ2h0PSI0NSIvPjxyZWN0IHg9IjMwMCIgeT0iMjMwIiB3aWR0aD0iNDAiIGhlaWdodD0iNzAiLz4KPHJlY3QgeD0iNDU1IiB5PSIxNzAiIHdpZHRoPSIzMCIgaGVpZ2h0PSI0NSIvPjxyZWN0IHg9IjU0NSIgeT0iMTcwIiB3aWR0aD0iMzAiIGhlaWdodD0iNDUiLz48cmVjdCB4PSI1MDAiIHk9IjIzNSIgd2lkdGg9IjMwIiBoZWlnaHQ9IjY1Ii8+CjwvZz4KPHBhdGggZD0iTTMwIDEzMCBIMjIwIEwyMDAgMTEyIEg1MFogTTIyMCAxMTAgSDQyMCBMNDAwIDkyIEgyNDBaIE00MjAgMTQwIEg2MTAgTDU5MCAxMjIgSDQ0MFoiIGZpbGw9IiM5YzRhMmYiLz4KPC9zdmc+" width="640" height="360" alt="Ilustração de três casarões coloniais lado a lado, pintados de amarelo, verde e laranja, com janelas brancas e telhados de cerâmica.">
+    </article>
+  </main>
+
+  <aside id="inscricao" class="container">
+    <h2>Receba novos roteiros</h2>
+    <form action="index.html" method="get">
+      <fieldset>
+        <legend>Seus dados</legend>
+        <div class="linha">
+          <div class="campo">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" required minlength="3" autocomplete="name"
+                   pattern="(?=(?:[^A-Za-zÀ-ÖØ-öø-ÿ]*[A-Za-zÀ-ÖØ-öø-ÿ]){3})[A-Za-zÀ-ÖØ-öø-ÿ]+(?:[ '\-][A-Za-zÀ-ÖØ-öø-ÿ]+)*"
+                   title="Use pelo menos três letras. Acentos, espaços, hífen e apóstrofo entre nomes são aceitos.">
+          </div>
+          <div class="campo">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required autocomplete="email">
+          </div>
+        </div>
+        <div class="campo">
+          <label for="idade">Idade</label>
+          <input type="number" id="idade" name="idade" required min="18" max="120">
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Preferências</legend>
+        <div class="campo">
+          <label for="assunto">Assunto de interesse</label>
+          <select id="assunto" name="assunto" required>
+            <option value="">Selecione um assunto</option>
+            <option value="roteiros">Roteiros de viagem</option>
+            <option value="gastronomia">Gastronomia maranhense</option>
+            <option value="fotografia">Dicas de fotografia</option>
+          </select>
+        </div>
+        <div class="campo campo-checkbox">
+          <input type="checkbox" id="termos" name="termos" value="aceito" required>
+          <label for="termos">Aceito os termos</label>
+        </div>
+      </fieldset>
+
+      <button type="submit">Inscrever-se</button>
+    </form>
+  </aside>
+
+  <footer>
+    <p>&copy; 2026 Rotas do Maranhão. Conteúdo demonstrativo para a disciplina Desenvolvimento para Web.</p>
+  </footer>
+</body>
+</html>
